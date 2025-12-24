@@ -29,12 +29,3 @@ make install
 ```
 
 This will create a virtual environment (if it doesn't exist) and install all Python dependencies listed in `requirements.txt`.
-
----
-
-You can now use the following commands:
-
-- `make lint` to lint Python and Markdown files
-- `make format` to auto-format Python code
-- `make test` to run tests
-- `make clean` to clean the project (remove build artifacts, caches, and virtual environment) in case of issues

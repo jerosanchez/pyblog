@@ -19,7 +19,7 @@ lint:
 test:
 	@echo "Running tests..."
 	@. .venv/bin/activate && \
-		pytest tests/
+		pytest test/
 
 build:
 	@echo "Building application..."
@@ -31,6 +31,9 @@ all: install format lint test build deploy
 
 serve:
 	@echo "Starting development server..."
+
+precommit: format lint test
+	@echo "Pre-commit checks passed."
 
 clean:
 	@echo "Cleaning up..."

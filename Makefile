@@ -12,7 +12,7 @@ format:
 lint:
 	@echo "Linting code..."
 	@. .venv/bin/activate && \
-		pylint main.py **/*.py
+		pylint **/*.py
 	@echo "Linting documentation..."
 	@markdownlint **/*.md
 

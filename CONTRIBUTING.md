@@ -25,3 +25,59 @@ This project uses a Makefile to streamline common development tasks. Below are t
 6. Submit a pull request with a clear description of your changes.
 
 For any questions, please open an issue or reach out to the maintainers.
+
+## Project Folder Structure
+
+The main folders and files in this project are:
+
+- **app/**: Main application code.
+  - **api/**: API route definitions (e.g., `v1/` for versioned APIs).
+  - **clients/**: Clients for internal and third-party services.
+  - **core/**: Cross-cutting concerns: config, logging, utilities, etc.
+  - **db/**: Database schemas, migrations, and related database setup.
+  - **models/**: Pydantic models and validation logic.
+  - **repositories/**: Database access logic and remote service integration.
+  - **services/**: Business logic and reusable service functions.
+  - **main.py**: FastAPI application entry point.
+- **docs/**: Project documentation.
+  - **adr/**: Architecture Decision Records.
+  - **agents/**: Guidelines for agents or automation components.
+  - **diagrams/**: System and architecture diagrams.
+  - **specs/**: API and system specifications.
+- **tests/**: Unit and integration tests.
+- **Makefile**: Common development commands.
+- **requirements.txt**: Python dependencies.
+- **README.md**: Project overview and setup instructions.
+- **CONTRIBUTING.md**: Contribution guidelines (this file).
+
+This structure is designed to keep code organized and maintainable as your FastAPI service grows. The `app/repositories/` folder is recommended for encapsulating all database access logic, keeping it separate from business logic and models.
+
+## VS Code Extensions
+
+To improve your development experience, consider installing the following VS Code extensions:
+
+```sh
+code --install-extension ms-python.vscode-python-envs
+code --install-extension bierner.markdown-preview-mermaid
+```
+
+- **Python Environments**: Provides a unified Python environment experience and better integration for Python projects.
+- **Markdown Preview Mermaid Support**: Adds Mermaid diagram and flowchart support to VS Code's markdown preview.
+
+Other useful extensions for FastAPI, linting, testing, Docker, and YAML include:
+
+```sh
+code --install-extension ms-azuretools.vscode-docker
+code --install-extension ms-python.python
+code --install-extension ms-python.black-formatter
+code --install-extension ms-python.isort
+code --install-extension ms-python.pylint
+code --install-extension ms-python.pytest
+```
+
+- **Docker**: Manage and debug containerized applications.
+- **Python**: Core Python language support.
+- **Black Formatter**: Auto-format Python code with Black.
+- **isort**: Sort Python imports automatically.
+- **Pylint**: Python code linting.
+- **Pytest**: Python test integration.
